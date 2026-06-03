@@ -20,10 +20,17 @@ const reverseString = function (str) {
 const arr1 = [1, 2, 3];
 const arr2 = [];
 
+//Before Exetnsion
+// const swap = function (arr1, arr2) {
+//   if (arr1.length === 0) return;
+//   arr2.push(arr1[0]);
+//   arr1.splice(0, 1);
+//   return swap(arr1, arr2);
+// };
+//After Extension
 const swap = function (arr1, arr2) {
   if (arr1.length === 0) return;
-  arr2.push(arr1[0]);
-  arr1.splice(0, 1);
+  arr2.push(arr1.pop());
   return swap(arr1, arr2);
 };
 
